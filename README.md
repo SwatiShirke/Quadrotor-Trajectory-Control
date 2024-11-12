@@ -4,13 +4,13 @@
 
 This repository contains a MATLAB implementation of quadrotor trajectory control using a **cascaded PD controller**. The control strategy includes:
 - An **outer position control loop** to manage the quadrotor's spatial position.
-- An **inner PID control loop** for attitude stabilization and precise orientation adjustments.
+- An **inner PD control loop** for attitude stabilization and precise orientation adjustments.
 
 The cascaded control approach ensures that the quadrotor can achieve stable flight dynamics while following a desired trajectory.
 
 ## Project Features
 
-- **Cascaded Controllers**: The outer PD controller handles position control, while the inner PID controller manages attitude and orientation.
+- **Cascaded Controllers**: The outer PD controller handles position control, while the inner PD controller manages attitude and orientation.
 - **Trajectory Following**: The control system is capable of following complex trajectories in 3D space.
 - **Data Visualization**: Simulation results include trajectory graphs and response plots to visualize quadrotor performance.
 
@@ -41,7 +41,7 @@ The cascaded control approach ensures that the quadrotor can achieve stable flig
 
 - `runsim.m`: The main script to initialize parameters, configure the control system, and simulate the quadrotor trajectory.
 - `quadEOM_readonly.m`: Defines the quadrotor dynamics.
-- `pid_controller.m`: Configures the PD and PID controller parameters.
+- `pid_controller.m`: Configures the PD and PD controller parameters.
 - `traj`: Directory has trajectories to be followed. 
 - `crazyflie.m`: Defines quadrotors parameters.
 
@@ -53,10 +53,10 @@ This graph shows the quadrotor following the desired path. The blue line represe
 
 ![Trajectory Plot](path/to/trajectory_plot.png)
 
-### 2. Position and Attitude Control Response
+### 2. Position and Velocity Response
 
 - **Position Control**: A graph showing the x, y, and z position responses over time.
-- **Attitude Control**: Plots of roll, pitch, and yaw angles controlled by the inner PID loop.
+- **Attitude Control**: A graph showing the linear velocity responses over time.
 
 ![Velocity Plot](Results/vel_plot.jpg)
 ![Position Plot](Results/x_y_z_plot.jpg)
@@ -65,14 +65,14 @@ This graph shows the quadrotor following the desired path. The blue line represe
 
 Watch a video of the quadrotor following a complex 3D trajectory:
 
-[![Quadrotor Simulation])
+![Quadrotor Simulation](Results/Hover_control_3D.mp4)
 
 ## How It Works
 
 The quadrotor trajectory control is implemented using a cascaded control structure:
 
 1. **Outer Loop (PD Position Control)**: Computes the desired attitude based on the error between the current and desired positions.
-2. **Inner Loop (PID Attitude Control)**: Stabilizes the quadrotor's orientation by adjusting thrust and moment outputs to achieve the desired attitude.
+2. **Inner Loop (PD Attitude Control)**: Stabilizes the quadrotor's orientation by adjusting thrust and moment outputs to achieve the desired attitude.
 
 The combination of position control and attitude control enables the quadrotor to follow the desired trajectory accurately while compensating for disturbances.
 
