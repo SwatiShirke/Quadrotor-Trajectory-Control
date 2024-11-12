@@ -33,9 +33,9 @@ The cascaded control approach ensures that the quadrotor can achieve stable flig
 
 1. Run the main script:
    ```matlab
-   main.m
+   runsim.m
    ```
-2. The simulation will start, and you can observe the quadrotor’s behavior following the specified trajectory. Adjust parameters in `controller_params.m` to modify control gains for different behaviors.
+2. The simulation will start, and you can observe the quadrotor’s behavior following the specified trajectory. Adjust parameters in `pid_controller.m` to modify control gains for different behaviors.
 
 ## Project Structure
 
@@ -58,8 +58,8 @@ This graph shows the quadrotor following the desired path. The blue line represe
 - **Position Control**: A graph showing the x, y, and z position responses over time.
 - **Attitude Control**: Plots of roll, pitch, and yaw angles controlled by the inner PID loop.
 
-![Position Control](Results/vel_plot.jpg)
-![Attitude Control](path/to/attitude_control_response.png)
+![Velocity Plot](Results/vel_plot.jpg)
+![Position Plot](Results/x_y_z_plot.jpg)
 
 ### 3. Video Demonstration
 
