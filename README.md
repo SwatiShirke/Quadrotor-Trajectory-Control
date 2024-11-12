@@ -58,7 +58,7 @@ This graph shows the quadrotor following the desired path. The blue line represe
 - **Position Control**: A graph showing the x, y, and z position responses over time.
 - **Attitude Control**: Plots of roll, pitch, and yaw angles controlled by the inner PID loop.
 
-![Position Control](path/to/position_control_response.png)
+![Position Control](Results/vel_plot.jpg)
 ![Attitude Control](path/to/attitude_control_response.png)
 
 ### 3. Video Demonstration
