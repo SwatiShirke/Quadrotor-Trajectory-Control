@@ -86,6 +86,3 @@ The combination of position control and attitude control enables the quadrotor t
 
 Contributions are welcome! If you have ideas for improvement, please open an issue or submit a pull request.
 
----
-
-Replace the placeholder paths (`path/to/trajectory_plot.png`, `YOUR_VIDEO_ID`) with actual links to your graphs and videos for a complete README. Let me know if you need further customization or additional sections.
